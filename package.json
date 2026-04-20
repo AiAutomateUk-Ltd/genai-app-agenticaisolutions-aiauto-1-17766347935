@@ -1,0 +1,131 @@
+import React from 'react';
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer
+} from 'recharts';
+import { ROADMAP_DATA } from '../constants';
+
+export const RoadmapSection: React.FC = () => {
+  return (
+    <section className="bg-slate-800 text-white rounded-xl shadow-2xl p-8 md:p-12 border-b-8 border-blue-600">
+      <h2 className="text-3xl font-bold mb-8 text-center flex justify-center items-center">
+        <span className="text-4xl mr-3 text-orange-500">&#128640;</span>
+        Strategic Deployment Roadmap
+      </h2>
+      <p className="text-lg text-slate-300 mb-12 text-center max-w-4xl mx-auto">
+        Executing a decentralized, hardware-agnostic strategy requires a phased approach to build enterprise trust, validate ambient algorithms, and scale network effects without disrupting existing operations.
+      </p>
+
+      <div className="space-y-6 mb-16 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-1 before:bg-gradient-to-b before:from-blue-500 before:to-orange-500">
+        
+        {/* Phase 1 */}
+        <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+          <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-800 bg-blue-500 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">1</div>
+          <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-700 p-6 rounded-lg border border-slate-600 shadow-md">
+            <div className="flex items-center justify-between mb-2">
+              <h4 className="font-bold text-xl text-blue-300">Phase 1: Proof of Value (PoV)</h4>
+              <span className="text-xs font-semibold px-3 py-1 bg-slate-800 text-slate-300 rounded-full border border-slate-600">Months 1-3</span>
+            </div>
+            <p className="text-slate-300 text-sm mb-4">Establishing baseline validation in isolated environments.</p>
+            <ul className="text-sm text-slate-400 space-y-2 list-disc pl-4">
+              <li><strong className="text-white">Maritime:</strong> Deploy Federated AI behind ONE tier-2 carrier firewall. Prove 90%+ prediction accuracy on local historical data.</li>
+              <li><strong className="text-white">Retail:</strong> Install Spatial AI in a single "dark store". Calibrate RF backscatter against physical cycle counts (95% precision target).</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Phase 2 */}
+        <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+          <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-800 bg-blue-400 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">2</div>
+          <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-700 p-6 rounded-lg border border-slate-600 shadow-md">
+            <div className="flex items-center justify-between mb-2">
+              <h4 className="font-bold text-xl text-blue-300">Phase 2: Localized Integration</h4>
+              <span className="text-xs font-semibold px-3 py-1 bg-slate-800 text-slate-300 rounded-full border border-slate-600">Months 4-9</span>
+            </div>
+            <p className="text-slate-300 text-sm mb-4">Moving from sandbox to controlled live environments.</p>
+            <ul className="text-sm text-slate-400 space-y-2 list-disc pl-4">
+              <li><strong className="text-white">Maritime:</strong> Introduce "Seat Exchange" micro-bidding between two friendly carriers in a specific, high-volume corridor.</li>
+              <li><strong className="text-white">Retail:</strong> Deploy to 5 live locations. Integrate with store ERP and train Behavioral Anomaly Detection on real movement.</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Phase 3 */}
+        <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+          <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-800 bg-orange-400 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">3</div>
+          <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-700 p-6 rounded-lg border border-slate-600 shadow-md">
+            <div className="flex items-center justify-between mb-2">
+              <h4 className="font-bold text-xl text-orange-300">Phase 3: Network Scaling</h4>
+              <span className="text-xs font-semibold px-3 py-1 bg-slate-800 text-slate-300 rounded-full border border-slate-600">Months 10-18</span>
+            </div>
+            <p className="text-slate-300 text-sm mb-4">Mass adoption driven by zero-data-sharing and zero-CapEx appeals.</p>
+            <ul className="text-sm text-slate-400 space-y-2 list-disc pl-4">
+              <li><strong className="text-white">Maritime:</strong> Open Federated network to major global players (Maersk, MSC). Network effects aggressively reduce empty sea miles.</li>
+              <li><strong className="text-white">Retail:</strong> Chain-wide rollout (500+ stores). Legacy robots/cameras decommissioned, recovering operational budgets.</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Phase 4 */}
+        <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+          <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-800 bg-orange-500 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">4</div>
+          <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-700 p-6 rounded-lg border border-slate-600 shadow-md">
+            <div className="flex items-center justify-between mb-2">
+              <h4 className="font-bold text-xl text-orange-300">Phase 4: Autonomous Operation</h4>
+              <span className="text-xs font-semibold px-3 py-1 bg-slate-800 text-slate-300 rounded-full border border-slate-600">Months 18+</span>
+            </div>
+            <p className="text-slate-300 text-sm mb-4">Establishing the new physical-world operating system.</p>
+            <ul className="text-sm text-slate-400 space-y-2 list-disc pl-4">
+              <li><strong className="text-white">Maritime:</strong> Full automation of global dynamic pricing and lease brokering, creating a self-balancing logistics web.</li>
+              <li><strong className="text-white">Retail:</strong> Integration with consumer Agentic Shopping Assistants; guaranteed physical fulfillment via spatial tracking.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-slate-900 p-8 rounded-xl border border-slate-700">
+        <h3 className="text-xl font-bold text-center mb-6 text-white">Projected Value Creation (Index)</h3>
+        <div className="w-full h-[350px] md:h-[400px] max-w-[700px] mx-auto">
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart
+              data={ROADMAP_DATA}
+              margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#334155" />
+              <XAxis dataKey="name" stroke="#cbd5e1" tick={{ fontWeight: 'bold', fontSize: 12 }} axisLine={false} tickLine={false} />
+              <YAxis stroke="#cbd5e1" axisLine={false} tickLine={false} />
+              <Tooltip 
+                contentStyle={{ backgroundColor: '#1e293b', borderColor: '#475569', color: '#f8fafc' }}
+                itemStyle={{ color: '#f8fafc' }}
+              />
+              <Legend verticalAlign="bottom" wrapperStyle={{ paddingTop: '20px' }} />
+              <Line 
+                type="monotone" 
+                dataKey="ourApproach" 
+                name="Cumulative Value - Our Approach" 
+                stroke="#ea580c" 
+                strokeWidth={4} 
+                dot={{ r: 6, fill: '#fff', stroke: '#ea580c', strokeWidth: 2 }} 
+                activeDot={{ r: 8 }} 
+              />
+              <Line 
+                type="monotone" 
+                dataKey="legacyApproach" 
+                name="Cumulative Value - Legacy Approach" 
+                stroke="#3b82f6" 
+                strokeWidth={2} 
+                dot={{ r: 4, fill: '#fff', stroke: '#3b82f6', strokeWidth: 2 }} 
+              />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
+    </section>
+  );
+};
